@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kayode's Visualization Portfolio</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Color palette as CSS variables */
+    :root{
+      --blue-1: #80A1BA;
+      --blue-2: #91C4C3;
+      --mint:   #B4DEBD;
+      --cream:  #FFF7DD;
+      --bg:     #f6f8f9;
+      --card:   #ffffff;
+      --text:   #1e2a30;
+      --muted:  #4a5a63;
+      --accent: var(--blue-2);
+      --radius: 12px;
+      --gap:    20px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg), #ffffff 60%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Header / hero */
+    header.site-header{
+      background: linear-gradient(135deg,var(--blue-1), var(--blue-2));
+      color:white;
+      padding:48px 18px;
+      border-bottom-left-radius:18px;
+      border-bottom-right-radius:18px;
+      box-shadow: 0 6px 24px rgba(28,40,48,0.12);
+    }
+    .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    .brand{
+      display:flex; align-items:center; gap:12px;
+    }
+    .logo{
+      width:56px; height:56px; border-radius:10px;
+      background: linear-gradient(180deg,var(--mint), var(--cream));
+      display:flex;align-items:center;justify-content:center;
+      color:var(--text); font-weight:700; font-size:18px;
+      box-shadow: 0 6px 16px rgba(30,40,48,0.12);
+    }
+    h1{font-size:28px; margin:12px 0 6px}
+    p.lead{margin:0; opacity:0.95; color:rgba(255,255,255,0.95)}
+
+    /* Intro / actions */
+    .hero-grid{display:grid; grid-template-columns: 1fr 380px; gap:28px; align-items:center; margin-top:22px}
+    .cta{
+      margin-top:18px;
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600;
+      background:var(--cream); color:var(--text);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .btn.secondary{
+      background: transparent; border:1px solid rgba(255,255,255,0.18); color:white;
+    }
+
+    /* Projects grid */
+    main{padding:36px 18px}
+    .projects{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:var(--gap);
+      max-width:1100px; margin:0 auto;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow: 0 6px 18px rgba(40,50,60,0.06);
+      overflow:hidden; display:flex; flex-direction:column;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{ transform:translateY(-8px); box-shadow: 0 18px 40px rgba(30,40,48,0.12) }
+    .thumb{
+      width:100%; height:170px; object-fit:cover; display:block;
+      background: linear-gradient(180deg,var(--blue-2), var(--mint));
+    }
+    .card-body{padding:14px 16px; flex:1; display:flex; flex-direction:column}
+    .kicker{color:var(--muted); font-size:13px; margin-bottom:6px}
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:0 0 12px; color:var(--muted); font-size:14px}
+    .card .links{margin-top:auto; display:flex; gap:8px}
+    .link{
+      text-decoration:none; font-weight:600; color:var(--accent); font-size:14px;
+      border-bottom:2px solid transparent; padding-bottom:2px;
+    }
+    .link:hover{border-color:var(--accent) }
+
+    /* About / contact */
+    .about{
+      max-width:1100px; margin:36px auto; padding:22px; border-radius:12px; background:linear-gradient(180deg, rgba(145,196,195,0.08), rgba(180,222,189,0.02));
+      display:flex; gap:22px; align-items:center;
+    }
+    .about img{width:120px; height:120px; border-radius:12px; object-fit:cover; box-shadow:0 8px 24px rgba(35,50,60,0.08);}
+
+    footer{
+      padding:18px; text-align:center; color:var(--muted); font-size:14px;
+      border-top:1px solid rgba(30,40,48,0.04); margin-top:36px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero-grid{grid-template-columns:1fr}
+      .about{flex-direction:column; text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">MV</div>
+        <div>
+          <div style="font-weight:600; font-size:14px; opacity:0.9">My Portfolio</div>
+          <div style="opacity:0.85; font-size:12px">Data visualization & analysis — Semester Projects</div>
+        </div>
+      </div>
+
+      <div class="hero-grid" style="margin-top:18px">
+        <div>
+          <h1>Selected Visualizations — 2025</h1>
+          <p class="lead">A curated collection of four semester assignments plus an extra project. Click any card to view the analysis, code, and data.</p>
+
+          <div class="cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#about">About / Contact</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.06); padding:14px; border-radius:10px;">
+          <strong style="display:block; font-size:18px">Featured</strong>
+          <p style="margin:6px 0 0; color:rgba(255,255,255,0.9)">Sales & Pricing Analysis<br><small style="opacity:0.85">OLS modelling • Python • Interactive plots</small></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <main id="projects">
+    <section class="projects container" aria-label="Projects">
+      <!-- Repeat one card per project -->
+      <article class="card">
+        <img class="thumb" src="assets/images/project1-thumb.png" alt="Project 1 thumbnail">
+        <div class="card-body">
+          <div class="kicker">Project 1 • Storyboard</div>
+          <h3>The Price of A Dream</h3>
+          <p>OLS regression on discount percentage, reviews, and ratings to assess sales drivers.</p>
+          <div class="links">
+            <a class="link" href="project1/index.html">Open project</a>
+            <a class="link" href="assets/notebooks/project1-analysis.ipynb">Notebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="assets/images/project2-thumb.png" alt="Project 2 thumbnail">
+        <div class="card-body">
+          <div class="kicker">Project 2 • Redesigning A Notable Information Graphic</div>
+          <h3>New Age John Snow's Map</h3>
+          <p>Interactive time-series charts and regional comparisons.</p>
+          <div class="links">
+            <a class="link" href="project2/index.html">Open project</a>
+            <a class="link" href="assets/notebooks/project2.ipynb">Notebook</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add other project cards here -->
+      <article class="card">
+        <img class="thumb" src="assets/images/project3-thumb.png" alt="Project 3 thumbnail">
+        <div class="card-body">
+          <div class="kicker">Project 3 • Persuasive Infographic</div>
+          <h3>Unemployment In Canada</h3>
+          <p>Graph analytics and cluster visualizations using NetworkX.</p>
+          <div class="links">
+            <a class="link" href="project3/index.html">Open project</a>
+            <a class="link" href="assets/notebooks/project3.ipynb">Notebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="assets/images/project4-thumb.png" alt="Project 4 thumbnail">
+        <div class="card-body">
+          <div class="kicker">Project 4 • Data Story</div>
+          <h3>The Effects of AI Implementation on Food Affordability: COVID-19 as a benchmark. </h3>
+          <p>Dashboard-style layout with KPI cards and drill-down charts.</p>
+          <div class="links">
+            <a class="link" href="project4/index.html">Open project</a>
+            <a class="link" href="assets/notebooks/project4.ipynb">Notebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="assets/images/project5-thumb.png" alt="Project 5 thumbnail">
+        <div class="card-body">
+          <div class="kicker">Project 5 • Correlation</div>
+          <h3>Price, Rating & Reviews</h3>
+          <p>Correlation analysis and visual storytelling of relationships between product metrics.</p>
+          <div class="links">
+            <a class="link" href="project5/index.html">Open project</a>
+            <a class="link" href="assets/notebooks/project5.ipynb">Notebook</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about container" aria-label="About">
+      <img src="assets/images/me.jpg" alt="Profile image">
+      <div>
+        <h2 style="margin:0 0 8px">About Me</h2>
+        <p style="margin:0 0 12px; color:var(--muted)">I am a data visualization student focused on clean, reproducible analysis and clear storytelling. These projects use Python, Pandas, Matplotlib, Plotly, Flourish, ArcGis, Canva, and Jupyter notebooks.</p>
+        <p style="margin:0"><a class="link" href="mailto:youremail@example.com">olusanyakayode@yahoo.com</a> • <a class="link" href="https://github.com/kayodeolusanya">GitHub</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="yr"></span> Kayode Olusanya — Built with GitHub Pages</div>
+  </footer>
+
+  <script>
+    // small nicety: current year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
