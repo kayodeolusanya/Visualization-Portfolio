@@ -56,6 +56,12 @@
       color:var(--text); font-weight:700; font-size:18px;
       box-shadow: 0 6px 16px rgba(30,40,48,0.12);
     }
+    .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
     h1{font-size:28px; margin:12px 0 6px}
     p.lead{margin:0; opacity:0.95; color:rgba(255,255,255,0.95)}
 
@@ -130,7 +136,9 @@
   <header class="site-header">
     <div class="container">
       <div class="brand">
-        <div class="logo">MV</div>
+        <div class="logo">
+            <img src="assets/images/me.jpeg" alt="My Profile" class="logo-img">
+        </div>
         <div>
           <div style="font-weight:600; font-size:14px; opacity:0.9">Kayode's Portfolio</div>
           <div style="opacity:0.85; font-size:12px">Data visualization & analysis — Semester Projects</div>
