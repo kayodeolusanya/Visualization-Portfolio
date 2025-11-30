@@ -1,17 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Project 2</title>
-<style>
-body { background:#FFF7DD; font-family: Arial; padding:40px; color:#2c2c2c; }
-h1 { color:#91C4C3; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 2 – Redesigning A Notable Information Graphic
+ | Kayode's Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --blue-1: #80A1BA;
+      --blue-2: #91C4C3;
+      --mint:   #B4DEBD;
+      --cream:  #FFF7DD;
+      --bg:     #f6f8f9;
+      --text:   #1e2a30;
+      --muted:  #4a5a63;
+      --radius: 12px;
+    }
+
+    body{
+      margin:0;
+      font-family:"Inter", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      padding-bottom:60px;
+    }
+
+    header{
+      background:linear-gradient(135deg,var(--blue-1),var(--blue-2));
+      padding:28px 18px;
+      color:white;
+      border-bottom-left-radius:18px;
+      border-bottom-right-radius:18px;
+      box-shadow:0 4px 16px rgba(0,0,0,0.15);
+    }
+    .container{max-width:900px; margin:0 auto; padding:0 18px;}
+    h1{margin:0 0 6px; font-size:32px; font-weight:700;}
+    p.lead{margin:0; opacity:0.9;}
+
+    .section{
+      background:white;
+      margin-top:28px;
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    h2{margin-top:0; font-size:22px;}
+
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      background:var(--mint);
+      color:var(--text);
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:600;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      margin-top:12px;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:40px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    img.story-img{
+      width:100%;
+      border-radius:12px;
+      margin:18px 0;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+  </style>
 </head>
+
 <body>
-<h1>Project 2 Title Placeholder</h1>
-<p>Short description about Project 2 explaining its purpose, tools used, and outcomes.</p>
-<p><strong>GitHub Link:</strong> <a href="#">Add Link Here</a></p>
+
+<header>
+  <div class="container">
+    <h1>Project 2 – Redesigning A Notable Information Graphic
+</h1>
+    <p class="lead">New Age John Snow's Map.</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>📌 Information Graphic Summary</h2>
+    <p>
+      This scrollytelling tells the story of John Snow with modern maps, a 19th-century British physician, widely regarded as one of the founders of modern epidemiology. 
+      During the 1854 cholera outbreak in London, most people believed cholera was spread through “bad air.” Snow challenged this idea. He mapped cholera cases in the Soho 
+      district and discovered that many victims lived near the Broad Street water pump. By removing the pump handle, he helped stop the outbreak. His work proved that cholera 
+      was transmitted through contaminated water, not air, and his use of data mapping became a landmark example of evidence-based public health.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🎞 Full Storyboard</h2>
+
+    <p>You can view the full interactive storyboard on ArcGis using the link below:</p>
+
+    <a class="btn" href="https://storymaps.arcgis.com/stories/1455171641734785ab23ca6a5b55b441">🔗 Open Storyboard on Canva</a>
+
+    <p style="margin-top:20px">
+      
+    </p>
+
+    <!-- EXAMPLE IMAGES — replace with your files -->
+    <!-- <img class="story-img" src="assets/images/story1.png" alt="Storyboard frame 1">
+    <img class="story-img" src="assets/images/story2.png" alt="Storyboard frame 2"> -->
+  </div>
+
+  <div class="section">
+    <h2>⬅ Back to Portfolio</h2>
+    <a class="btn" href="index.html">Return to Home</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Kayode Olusanya
+</footer>
+
 </body>
 </html>
