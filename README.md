@@ -1,6 +1,6 @@
 # Visualization-Portfolio
 
-Welcome to my personal data-visualization portfolio. This site showcases a curated collection of semester-long assignments and projects. Each project includes code, visuals (charts or infographics), and commentary — giving a full picture of my approach to data storytelling and analysis.
+Welcome to my personal data-visualization portfolio. This site showcases a curated collection of semester-long assignments and projects. Each project includes code, visuals (charts or infographics), and commentary - giving a full picture of my approach to data storytelling and analysis.
 
 🎯  What you’ll find here
 
